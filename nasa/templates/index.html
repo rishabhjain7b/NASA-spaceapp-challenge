@@ -1,0 +1,106 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>solar panel solutions</title>
+
+
+	<link rel="stylesheet" type="text/css" href="{% static 'materialize/css/materialize.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+
+
+<div class="container">
+<h1>Welcome {{ user }}</h1>
+	<h1>Add Appliances</h1>
+	<div class="row">
+		<form class="col m12 s12" action="" method="POST" action="">{% csrf_token %}
+
+			<div class="row">
+					<p class="col m2">
+      					<input type="checkbox" name="tubelight" class="filled-in" id="filled-in-box"/>
+      					<label for="filled-in-box">Tubelight</label>
+    				</p>
+
+    			<div class="input-field col s4 m4">
+          			<input placeholder="your appliance power" id="tubelight" type="text" class="validate" value="" name="tubelight">
+          			<label for="tubelight">appliance power rating</label>
+        		</div>
+
+  <div class="input-field col s4 m3">
+    <select name="tubelight" >
+      <option value=""  disabled selected>Choose your option</option>
+      <option  name="tubelight" value="1">1</option>
+      <option  value="2">2</option>
+      <option  value="3">3</option>
+    </select>
+    <label>No. of tubelights</label>
+  </div>
+			</div>
+
+			<div class="row">
+					<p class="col m2">
+      					<input type="checkbox" name="CFL" class="filled-in" id="filled-in-box2"/>
+      					<label for="filled-in-box2">CFL</label>
+    				</p>
+
+    			<div class="input-field col s4 m4">
+          			<input placeholder="your appliance power" id="CFL" type="text" class="validate" value="" name="CFL">
+          			<label for="CFL">appliance power rating</label>
+        		</div>
+
+  <div class="input-field col s4 m3">
+    <select name="CFL">
+      <option value="" disabled selected>Choose your option</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+    <label>No. of CFLs</label>
+  </div>
+			</div>
+
+			<div class="row">
+					<p class="col m2">
+      					<input type="checkbox" name="fan"  class="filled-in" id="filled-in-box3"/>
+      					<label for="filled-in-box3">Fan</label>
+    				</p>
+
+    			<div class="input-field col s4 m4">
+          			<input placeholder="your appliance power" id="fan" type="text" class="validate" value="" name="fan">
+          			<label for="fan">appliance power rating</label>
+        		</div>
+
+  <div class="input-field col s4 m3">
+    <select name="fan" >
+      <option value="" disabled selected>Choose your option</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+    <label>No. of fans</label>
+  </div>
+			</div>
+
+			
+
+			
+
+<input type="submit" name="" class="btn waves-light">
+
+		</form>
+
+
+		
+	</div>
+</div>
+
+
+<script type="text/javascript" src="{% static 'js/jquery-3.2.1.js' %}"></script>
+<script type="text/javascript" src="{% static 'materialize/js/materialize.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
+</body>
+</html>
